@@ -8,52 +8,58 @@
     <style>
 
         .container{
-            background-image: url(Imagem\ do\ tigrão.png);
-            background-position:100px 10px;
-            background-attachment: fixed;
-            background-size: cover;
+        width: 50%;           /* Largura relativa para se ajustar ao tamanho da tela */
+        max-width: 1200px;    /* Largura máxima para limitar o tamanho */
+        margin: 0 auto;       /* Centraliza o container horizontalmente */
+        padding: 20px;        /* Adiciona um espaçamento interno */
+        background:linear-gradient(rgb(255, 238, 0), rgb(53, 222, 228));
+        border-radius: 20px;  /* Bordas arredondadas */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
         }
          button{
-            background-color: rgb(165, 42, 42);
-            color: rgb(255, 255, 0);
-            font-size: 32px;
-            padding: 20px 30px;
-            cursor: pointer;
-            border: 0px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-position: center;
+            background: radial-gradient(red,blue);/*Cor do fundo do butão */
+            color: yellow;/*Cor da letra do butão */
+            font-size: 32px;/* Tamanho da fonte do butão*/
+            padding: 20px 30px;/* Tamanho de largura e comprimento*/
+            cursor: pointer;/* */
+            margin-left: 220px; /* Mudando a posição do butão*/
+            border-radius: 50px;/* borda do butão*/
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/* Textura da Letra*/
         }
 
         select{
-            border-bottom: 0px; 
-            background-color: rgb(240, 232, 165);
+            padding: 30px;/* */
+            position: relative;/* */
+            background-color: rgb(255, 255, 255);/* */
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/* */
+            font-size: 30px;/* */
+            margin-left: 260px;/* */
+            border-radius: 50px;/* */
+            border: 1px solid #ccc;/* */
         }
         body{
-            background: url(Imagem\ de\ fundo.png);
-            background-size:cover;
-            background-position:center;
-            background-attachment: fixed;
-        }
+            background:repeating-linear-gradient(rgb(53, 222, 228),rgb(255, 251, 0))/* Cor de fundo do corpo do site*/
+            
+         }
+
+         
         h2{
-            font-family: Arial, Helvetica, sans-serif;
-            color: aliceblue;
+            background:white;
+            border-radius: 50px;
+            color: BLACK;
             font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/* */
+
+            text-align: center;
         }
         h3{
             font-size: 30px;
             text-align: center;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        
+            color:rgb(0, 0, 0);
 
         }
-        select{
-            padding:20px 70px;
-            color: rgb(255, 255, 0);
-            background-color: rgb(165, 42, 42);
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 30px;
-        }
-        
     </style>  
 </head>
 <body>
@@ -186,5 +192,3 @@
 
 </body>
 </html>
-
-
