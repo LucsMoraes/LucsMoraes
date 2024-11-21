@@ -108,7 +108,7 @@
     <!--CRIANDO O SCRIPT-->
     <script>
 
-        //Criando display
+    //Criando display
     var display = document.getElementById('display');
 
     //Criando display para Minutos
@@ -147,32 +147,41 @@
         Horas.innerHTML+='<option value="'+i+'">'+i+'</option>';
     }
 
+    //Criando a funcionabilidade do butão começar
     Comecar.addEventListener('click',function(){
 
-        MinutosAtual = Minutos.value;
+        //Declando minutoAtual com valor de Minutos
+        MinutosAtual = Minutos.value; 
+
+        //Declando MinutoAtual atual com valor de Segundos
         SegundosAtual = Segundos.value;
+
+        //Declando HorasAtual com valor de Horas
         HorasAtual   = Horas.value;
 
-        //criar tempo inicial
+        //criar tempo inicial              Formantando horas                      Formatando minutos               formatando segundos
         display.childNodes[1].innerHTML = formatarTempo(HorasAtual) + ":" + formatarTempo(MinutosAtual) + ":" + formatarTempo(SegundosAtual);
 
-        //Começar a contagem do tempo
+        //Começar a contagem do tempo   
         interval = setInterval(function(){
+           
 
+        
             SegundosAtual--;
-
+            //Criando temporizador de segundosAtual
             if(SegundosAtual <0){
                 SegundosAtual = 59;
                 MinutosAtual --;
 
+            //Criando temporizador de MinutosAtual    
             if(MinutosAtual <0){
                 MinutosAtual = 59; 
                 HorasAtual --;
-
-            if(HorasAtual <0){
+            //Criando temporizador de HorasAtual
+           if(HorasAtual <0){
             clearInterval(interval); // Para o interval
             alert("Tempo esgotado!");//alerta do tempo
-            document.getElementById("sound").play(); // Toca o som
+            document.getElementById("sound").play(); // Toca o som quando terminar a contangem
             
             }
             }
@@ -180,7 +189,7 @@
 
             //Atualizar o tempo de exibição
             display.childNodes[1].innerHTML = formatarTempo(HorasAtual) + ":" + formatarTempo(MinutosAtual) + ":" + formatarTempo(SegundosAtual);
-            },1000);//Atualizar a cada segundo
+            },1000);//Tempo de atualizar em minisegundos
     });
     // Função para formatar o tempo e sempre mostrar 2 dígitos
     function formatarTempo(tempo) {
@@ -192,3 +201,5 @@
 
 </body>
 </html>
+
+
