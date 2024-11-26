@@ -7,3 +7,52 @@ CRIEI UM CONSTRUTOR PARA QUE FAÇA A EXIBIÇÃO PARA A QUANTIDADE DE LOJA E O NO
 E CRIEI UM VOID PARA SETFUNCIONARIO PARA STRING B E UM GET FUNCIONARIO PARA FAZER A MODIFICAÇÃO 
 NO INT MAIN CRIEI O OBJETO EMPRESA ONDE VAI APARECE COLOCAR OS NOME E OS NUMEROS DE FUNCIONARIOS
 E NO FINAL DO CODIGO MOSTRAR O MELHOR PROFESSOR(A) DA EMPRESA (UNIMETRO)
+
+#include<iostream>
+#include <string>
+using namespace std;
+
+class Empresa{
+
+private:
+	
+	string funcionario;
+	int  QntLojas;
+	
+public:
+	
+	Empresa(string b, int  a){
+    funcionario = b;
+    QntLojas = a;
+}
+void exibirInformacao(){
+	
+	cout << "QUANTIDADE DE LOJAS:" << QntLojas     <<endl;
+	cout << "NOME DE FUNCIONARIO:"<< funcionario  <<endl;
+}
+
+//funciocao de modificar valores de GETTES E SETTES
+void setfuncionario(string b){
+	funcionario = b;
+}
+
+
+string  getfuncionario(){
+	return funcionario;
+}
+};
+int main(){	
+
+//Crio objeto da classe Empresa:
+Empresa minhaempresa("DINOLA" , 20);
+
+//Acesso um membro publico:
+
+minhaempresa.exibirInformacao();
+minhaempresa.setfuncionario("ELDA NUNES");
+
+cout << "MELHOR PROFESSORA DA UNIMETRO:" << minhaempresa.getfuncionario() << endl;
+return 0;
+}
+
+
