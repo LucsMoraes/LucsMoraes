@@ -1,3 +1,9 @@
+Esté JavasCript é um cronometro que calcula os Horas, Minutos e Horas.
+A numeração dos numeros vão de 1 até 60.
+Abaixo aparece a numeração de quando o tempo já foi percorrido.
+E quando acaba o tempo é dado um alerte dizendo "Tempo esgotado!".
+E quando termina o tempo toca um som de relogio sinalizando que o tempo foi terminado.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
