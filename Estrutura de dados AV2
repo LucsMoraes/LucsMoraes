@@ -83,13 +83,11 @@ string  getfuncionario(){
 }
 };
 int main(){	
-    // Variáveis para armazenar os dados
     string nome;
     int idade, RG;
 
-    // Coletando os dados do usuário
     cout << "DIGITE SEU NOME...: ";
-    getline(cin, nome);  // Usamos getline para permitir o nome com espaços
+    getline(cin, nome);  
 
     cout << "DIGITE SUA IDADE..: ";
     cin >> idade;
@@ -97,10 +95,8 @@ int main(){
     cout << "DIGITE SEU RG.....: ";
     cin >> RG;
 
-    // Criando o objeto Empresa com os dados fornecidos
     Empresa empresa(nome, idade, RG);
 
-    // Exibindo as informações do funcionário
     empresa.exibirInformacao();
 
     return 0;
