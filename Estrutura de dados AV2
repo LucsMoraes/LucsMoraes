@@ -43,16 +43,68 @@ string  getfuncionario(){
 };
 int main(){	
 
-//Crio objeto da classe Empresa:
-Empresa minhaempresa("DINOLA" , 20);
+#include<iostream>
+#include <string>
+using namespace std;
 
-//Acesso um membro publico:
+class Empresa{
 
-minhaempresa.exibirInformacao();
-minhaempresa.setfuncionario("ELDA NUNES");
-
-cout << "MELHOR PROFESSORA DA UNIMETRO:" << minhaempresa.getfuncionario() << endl;
-return 0;
+private:
+	
+	string funcionario;
+	int  Idade;
+	int RG;
+	
+	
+public:
+	
+	Empresa(string b, int  a,int c){
+    funcionario = b;
+    Idade = a;
+    RG = c;
 }
+void exibirInformacao(){
+	
+	printf("\n DADOS DO FUNCIONARIO: \n");
+	cout << "NOME DO FUNCIONARIO...:" << funcionario << endl;
+	cout << "IDADE DO FUNCIONARIO..:" << Idade << endl;
+	cout << "RG DO FUNCIONARIO.....:" << RG << endl;
+
+}
+
+//funciocao de modificar valores de GETTES E SETTES
+void setfuncionario(string b){
+	funcionario = b;
+}
+
+
+string  getfuncionario(){
+	return funcionario;
+}
+};
+int main(){	
+    // Variáveis para armazenar os dados
+    string nome;
+    int idade, RG;
+
+    // Coletando os dados do usuário
+    cout << "DIGITE SEU NOME...: ";
+    getline(cin, nome);  // Usamos getline para permitir o nome com espaços
+
+    cout << "DIGITE SUA IDADE..: ";
+    cin >> idade;
+
+    cout << "DIGITE SEU RG.....: ";
+    cin >> RG;
+
+    // Criando o objeto Empresa com os dados fornecidos
+    Empresa empresa(nome, idade, RG);
+
+    // Exibindo as informações do funcionário
+    empresa.exibirInformacao();
+
+    return 0;
+}	
+
 
 
