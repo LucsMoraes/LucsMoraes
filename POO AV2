@@ -10,7 +10,7 @@ int main() {
     
     float arroz = 5.80;
     float feijao = 4.90;
-    float total = 0;  // Total amount spent by the user
+    float total = 0;  
     
     cout << "Aqui temos as opcoes" << endl;
     cout << "Aperte 1 para comprar o arroz - " << arroz << " reais" << endl;
@@ -19,7 +19,7 @@ int main() {
     int opcao;
     char continuar = 's';
     
-    while (continuar == 's') {  // Fixed condition to continue the loop correctly
+    while (continuar == 's') {  
         cout << "Escolha qual produto vc deseja comprar. Aperte 1 para arroz, 2 para feijao" << endl;
         cin >> opcao;
         
@@ -33,7 +33,7 @@ int main() {
                     cout << "Voce nao tem dinheiro suficiente para comprar arroz." << endl;
                 }
                 break;
-            case 2:  // Beans
+            case 2: 
                 if (dinheiro >= feijao) {
                     total += feijao;
                     dinheiro -= feijao;
