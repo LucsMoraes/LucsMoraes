@@ -8,21 +8,28 @@ using namespace std;
 class Empresa{
 
 private:
-	
+	//Funcões de string e int 
 	string funcionario;
 	int  Idade;
 	int RG;
 	
 	
 public:
-	
+	//Sintaxe de string e int 
 	Empresa(string b, int  a,int c){
+		
+	//funcionario é igual = b	
     funcionario = b;
+    
+    //idade é igual = a
     Idade = a;
+    
+    //RG é igual = c
     RG = c;
 }
 void exibirInformacao(){
 	
+	//Exibir informarções quando os dados forem preenchidas
 	printf("\n DADOS DO FUNCIONARIO: \n");
 	cout << "NOME DO FUNCIONARIO...:" << funcionario << endl;
 	cout << "IDADE DO FUNCIONARIO..:" << Idade << endl;
@@ -41,25 +48,34 @@ string  getfuncionario(){
 }
 };
 int main(){	
+
+    //Funções de string e int 
     string nome;
     int idade, RG;
-
+    
+    //Digite o nome do funcionario
     cout << "DIGITE SEU NOME...: ";
     getline(cin, nome);  
-
+    
+    //Função para aparecer o "DIGITE SEU RG"
     cout << "DIGITE SUA IDADE..: ";
+    
+    //Função para digitar o RG
     cin >> idade;
-
+    
+    //Função para aparecer o "DIGITE SEU RG"
     cout << "DIGITE SEU RG.....: ";
+    
+    //Função para digitar o RG
     cin >> RG;
-
+    
+    //Objeto para salvar os funções de nome, idade e RG
     Empresa empresa(nome, idade, RG);
-
+    //Aparecer a tela após todos os dados forem preenchidas
     empresa.exibirInformacao();
 
     return 0;
 }
-
 
 
 
