@@ -1,6 +1,64 @@
-Esté JavasCript é um cronometro que calcula os Horas, Minutos e Horas.
-A numeração dos numeros vão de 1 até 60.
-Abaixo aparece a numeração de quando o tempo já foi percorrido.
-E quando acaba o tempo é dado um alerte dizendo "Tempo esgotado!".
-E quando termina o tempo toca um som de relogio sinalizando que o tempo foi terminado.
+#include <iostream>
+using namespace std;
 
+int main() {
+    cout << "...........BEM VINDO A MINHA LOJA.........." << endl;
+    
+    float dinheiro;
+    cout << "Quanto dinheiro vc tem? " << endl;
+    cin >> dinheiro;
+    
+    float arroz = 5.80;
+    float feijao = 4.90;
+    float total = 0;  // Total amount spent by the user
+    
+    cout << "Aqui temos as opcoes" << endl;
+    cout << "Aperte 1 para comprar o arroz - " << arroz << " reais" << endl;
+    cout << "Aperte 2 para comprar o feijao - " << feijao << " reais" << endl;
+    
+    int opcao;
+    char continuar = 's';
+    
+    while (continuar == 's') {  // Fixed condition to continue the loop correctly
+        cout << "Escolha qual produto vc deseja comprar. Aperte 1 para arroz, 2 para feijao" << endl;
+        cin >> opcao;
+        
+        switch (opcao) {
+            case 1:  // Rice
+                if (dinheiro >= arroz) {
+                    total += arroz;
+                    dinheiro -= arroz;
+                    cout << "Voce comprou o arroz por " << arroz << " reais." << endl;
+                } else {
+                    cout << "Voce nao tem dinheiro suficiente para comprar arroz." << endl;
+                }
+                break;
+            case 2:  // Beans
+                if (dinheiro >= feijao) {
+                    total += feijao;
+                    dinheiro -= feijao;
+                    cout << "Voce comprou o feijao por " << feijao << " reais." << endl;
+                } else {
+                    cout << "Voce nao tem dinheiro suficiente para comprar feijao." << endl;
+                }
+                break;
+            default:
+                cout << "Voce so pode selecionar 1 ou 2." << endl;
+                break;
+        }
+        
+        cout << "Voce deseja comprar outro alimento? Aperte s para sim e n para nao: " << endl;
+        cin >> continuar;
+    }
+    
+    cout << "\nTotal gasto: " << total << " reais" << endl;
+    cout << "Saldo restante: " << dinheiro << " reais" << endl;
+    
+    if (dinheiro >= 0) {
+        cout << "VALEU PELA COMPRA!" << endl;
+    } else {
+        cout << "Voce ta me devendo, caba safado!" << endl;
+    }
+    
+    return 0;
+}
